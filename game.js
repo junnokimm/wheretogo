@@ -3768,7 +3768,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       japan: ["도쿄", "오사카", "교토", "후쿠오카", "삿포로"],
       usa: ["뉴욕", "로스앤젤레스", "시카고", "마이애미", "샌프란시스코"]
-      // 추가 국가와 도시들
+      // 나중에 json 파일 연동하기
   };
 
   // 국가 선택 시 "게임 시작" 버튼 활성화
@@ -3792,7 +3792,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedCountry = countrySelect.value;
       const cities = countries[selectedCountry];
 
-      // 공들이 돌아가는 애니메이션 시작 (간단한 예시로 추가할 수 있음)
+      // 공들이 돌아가는 애니메이션 시작 
       const ballsContainer = document.getElementById("balls-container");
       ballsContainer.innerHTML = ''; // 이전 공들 제거
 
