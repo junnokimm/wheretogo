@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 여행지 정하기 게임</title>
+    <link rel="stylesheet" href="../wheretogo/css/game.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 국가 선택 화면 -->
+        <div id="country-selection" class="section">
+            <h1>랜덤 여행지 정하기</h1>
+            <label for="country-select">여행할 국가를 선택하세요:</label>
+            <select id="country-select">
+                <option value="">국가를 선택</option>
+                <option value="korea">대한민국</option>
+                <option value="usa">미국</option>
+                <option value="japan">일본</option>
+                <!-- 추가 국가들 나열 -->
+            </select>
+            <button id="start-game-btn" disabled>게임 시작</button>
+        </div>
+
+        <!-- 게임 화면 -->
+        <div id="game-screen" class="section" style="display: none;">
+            <div class="lottery-machine">
+                <!-- 공들이 돌아가는 애니메이션을 넣을 부분 -->
+                <div id="balls-container">
+                    <!-- 공들이 이곳에서 돌아가며 이동 -->
+                </div>
+            </div>
+            <button id="draw-btn">뽑기</button>
+            <h2 id="result">이번 여행지는 ??? 입니다!</h2>
+            <button id="play-again-btn" style="display: none;">다시 하기</button>
+            <button id="exit-btn">종료하기</button>
+        </div>
+    </div>
+
+    <script src="../wheretogo/game.js"></script>
+</body>
+</html>

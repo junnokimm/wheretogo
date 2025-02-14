@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a1b9a, #d32f2f); /* 세련된 그라디언트 배경 */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  font-weight: 500;
+  color: #f39c12; /* 강렬한 노란색 강조 */
+}
+
+button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+#country-select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+
+.section {
+  display: none;
+}
+
+#country-selection {
+  display: block;
+}
+
+#game-screen {
+  display: none;
+}
+
+.lottery-machine {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#balls-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: ballsMovement 3s infinite linear;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  animation: ballBounce 1.5s infinite alternate;
+}
+
+@keyframes ballsMovement {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(100px) translateY(-50px); }
+  100% { transform: translateX(200px) translateY(0); }
+}
+
+@keyframes ballBounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+
+#result {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
